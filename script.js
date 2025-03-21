@@ -61,6 +61,6 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
     smoothMobile: true, // Mobile par bhi smooth scrolling enable
-    multiplier: window.innerWidth < 768 ? 5 : 1 // Mobile par scroll speed 2x ho jayegi
+    multiplier: window.innerWidth < 768 ? 2 : 1 // Mobile par scroll speed 2x ho jayegi
 });
 
