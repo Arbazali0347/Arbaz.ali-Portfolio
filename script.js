@@ -1,5 +1,19 @@
 
+document.querySelectorAll('.links a').forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        let targetId = this.getAttribute("href");
+        let targetElement = document.querySelector(targetId);
 
+        if (targetElement) {
+            let yOffset = -50; // Adjust as needed
+            let y = targetElement.getBoundingClientRect().top + window.scrollY + yOffset;
+
+            window.history.pushState(null, null, targetId); // URL update karega
+            window.scrollTo({ top: y, behavior: "smooth" });
+        }
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     let progressBars = document.querySelectorAll(".progress-container");
@@ -25,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(bar);
     });
 });
-
 
 
 gsap.from(".page1 h1",{
@@ -57,10 +70,10 @@ gsap.from(".nav-bar",{
     stagger:0
 });
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-    smoothMobile: true, // Mobile par bhi smooth scrolling enable
-    multiplier: window.innerWidth < 768 ? 2 : 1 // Mobile par scroll speed 2x ho jayegi
-});
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('[data-scroll-container]'),
+//     smooth: true,
+//     smoothMobile: true, // Mobile par bhi smooth scrolling enable
+//     multiplier: window.innerWidth < 768 ? 2 : 1 // Mobile par scroll speed 2x ho jayegi
+// });
 

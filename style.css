@@ -11,6 +11,10 @@
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     height: 100%;
@@ -22,19 +26,19 @@ body {
 /* ---------------------- */
 
 .nav-bar {
-    /* background-color: rgb(227, 227, 227); */
+    background-color: rgb(255, 255, 255);
     width: 100%;
-    height: 130px;
+    height: 90px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     position: fixed;
-    z-index: 99;
+    z-index: 10;
 
 }
 
 .my-logo {
-    margin: 10px;
+    margin: 20px;
 }
 
 .lines {
@@ -52,11 +56,12 @@ body {
     font-size: 15px;
     margin-right: 30px;
 }
-.lines a:hover{
+
+.lines a:hover {
     color: #727272;
 }
 
-.icons i{
+.icons i {
     font-size: 20px;
     margin: 0 20px;
     cursor: pointer;
@@ -68,17 +73,6 @@ body {
     /* position: fixed; */
     border-radius: 50px;
 }
-
-
-.hid-logo {
-    opacity: 0;
-}
-
-.hid-icon {
-    opacity: 0;
-}
-
-
 
 
 /* ---------------------- */
@@ -425,7 +419,8 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.cv-btn a{
+
+.cv-btn a {
     text-decoration: none;
 }
 
@@ -653,11 +648,15 @@ circle {
 .center-items img {
     width: 30vw;
 }
-.center-items{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
+
+.center-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.right-items{
+    text-align: right;
 }
 
 .right-links {
@@ -680,18 +679,21 @@ circle {
     color: #a0a0a0;
     margin: 20px 0;
 }
-.gmail{
+
+.gmail {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.gmail span p{
+
+.gmail span p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.1vw;
     text-align: center;
-    margin:  0 20px;
+    margin: 0 20px;
     color: #727272;
 }
+
 @media (max-width:800px) {
     .page1 h1 {
         letter-spacing: 0px;
@@ -887,6 +889,7 @@ circle {
 
     .nav-bar {
         padding: 0;
+        background-color: transparent;
     }
 
     .links {
@@ -905,18 +908,21 @@ circle {
     .icons {
         padding: 10px;
     }
+
     .page9 {
         margin-top: 50px;
-        height: 30vh;    
+        height: 30vh;
         padding: 0 10px;
         font-size: 15px;
-    }    
-    .gmail{
+    }
+
+    .gmail {
         flex-direction: column;
     }
-    .gmail span p{
+
+    .gmail span p {
         font-size: 3vw;
-        margin:  0 20px;
+        margin: 0 20px;
     }
 
 }
